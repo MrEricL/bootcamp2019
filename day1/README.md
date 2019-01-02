@@ -8,4 +8,4 @@ On a machine with Python 3 installed, execute
 $ python3 -m http.server
 ```
 
-Alternatively, open index.html in a web browser.
+Alternatively, open `index.html` in a web browser.
