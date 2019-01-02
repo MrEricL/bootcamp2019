@@ -1,4 +1,23 @@
 h3{
-	color: black;
+    color: black;
 }
 
+ul, .navbar {
+    background: white !important;
+    border-bottom-color: red;
+}
+
+.navbar.navbar-default {
+    border-bottom-color: red;
+    border-bottom-width: 2px;
+    border-radius: 0px;
+}
+
+li > a {
+    color: black !important;
+}
+
+li > a:hover {
+    color: red !important;
+    text-decoration: underline !important;
+}style="padding-right: 25px; padding: 3px"
