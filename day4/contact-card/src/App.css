@@ -1,0 +1,22 @@
+.card {
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+  display: grid;
+  font-family: 'Trebuchet MS', sans-serif;
+  height: 200px;
+  margin: 20px auto;
+  width: 350px;
+  color: red;
+
+}
+
+
+.info {
+    grid-column: 2 / span 6;
+    grid-row: 5 / span 6;
+ }
+
+
+
+
+
