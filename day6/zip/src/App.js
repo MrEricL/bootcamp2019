@@ -21,7 +21,7 @@ class App extends Component {
       this.setState({zip: e.target.value});
 
       this.fetchZipData(e.target.value);
-      this.interval = setInterval(() => this.fetchZipData(e.target.value), 60 * 1000);
+      //this.interval = setInterval(() => this.fetchZipData(e.target.value), 60 * 1000);
        this.setState({searched: true});
     }
   }
