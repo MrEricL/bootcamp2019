@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Data.css';
 
 class Data extends Component {
 
@@ -10,6 +11,7 @@ class Data extends Component {
             loc: this.props.loc,
             pop: this.props.pop,
             totwage: this.props.totwage,
+            city : this.props.city
 
         };
     }
@@ -19,6 +21,7 @@ class Data extends Component {
     render() {
         return (
             <div className="info">
+                <h3>{this.state.city}</h3> <br/>
                 {this.state.st} <br/>
                 {this.state.loc} <br/>
                 {this.state.pop} <br/>

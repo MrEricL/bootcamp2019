@@ -47,7 +47,7 @@ class App extends Component {
 
     let r = this.state.result;
 
-    const d = r.map((i) => <Data st= {i["State"]} loc= {[i["Lat"], i["Long"]]} pop = {i["EstimatedPopulation"]}  totwage= {i["TotalWages"]} /> );
+    const d = r.map((i) => <Data st= {i["State"]} loc= {[i["Lat"], i["Long"]]} pop = {i["EstimatedPopulation"]}  totwage= {i["TotalWages"]} city = {i["City"]} /> );
 
     if (!this.state.searched){
       return (
