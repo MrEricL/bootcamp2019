@@ -21,12 +21,18 @@ class Data extends Component {
     render() {
         return (
             <div className="info">
+              <div className="title">
                 <h3>{this.state.city}</h3> <br/>
-                {this.state.st} <br/>
-                {this.state.loc} <br/>
-                {this.state.pop} <br/>
-                {this.state.totwage} <br/>
-           </div>
+            </div>
+            <div className="body">
+                <ul>
+                    <li>State: {this.state.st} <br/></li> 
+                    <li>Location: ({this.state.loc[0]},{this.state.loc[1]}) <br/></li> 
+                    <li>Population(estimated): {this.state.pop} <br/></li> 
+                    <li>Total Wages: {this.state.totwage} <br/></li> 
+                </ul>
+            </div>
+         </div>
         );
     }
 }
