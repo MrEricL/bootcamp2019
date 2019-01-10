@@ -16,7 +16,7 @@ class Search extends Component {
 	}
 
 	apiCall = (e) =>{
-		const key = "";
+        const key = "";
 		const q = this.state.term.split(" ").join("+");
 		const url = "http://api.giphy.com/v1/gifs/search?q="+q+"&api_key="+key;
 		console.log(url);

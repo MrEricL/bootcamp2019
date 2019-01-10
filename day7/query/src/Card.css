@@ -1,0 +1,7 @@
+.Card {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode' sans-serif;
+    border: 3px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+}

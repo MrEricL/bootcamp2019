@@ -20,14 +20,14 @@ class App extends Component {
   }
 
   trendingApi = ()=>{
-    const key = "";
+      const key = "";
     const url = "http://api.giphy.com/v1/gifs/trending?api_key="+key;
     console.log(url);
 
       axios.get(url)
         .then(response => {
             let l = [];
-            (response.data.data).forEach((i) => l.push(i["url"]));
+            (response.data.data).forEach((i) => l.push(i["bitly_url"]));
             this.setState({ data : l });
         console.log(l);
         })
@@ -42,7 +42,8 @@ class App extends Component {
     const gifs = this.state.data.map(i => <Card url = {i}/>);
     return (
       <div className="App">
-        <Search/>
+            <Search />
+            
         {gifs}
       </div>
     );
