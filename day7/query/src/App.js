@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import Search from "./components/Search";
 import Card from "./components/Card";
-import "./App.css";
+import './Card.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class App extends Component {
   }
 
   trendingApi = () => {
-    const key = "API_KEY";
+      const key = "";
     const url = "http://api.giphy.com/v1/gifs/trending?api_key=" + key;
     console.log(url);
 
@@ -34,7 +35,7 @@ class App extends Component {
 
   updateGif = r => {
     console.log("fired in:", this);
-    this.setState({ data: r });
+    this.setState({ data: r.splice(0,6) });
   };
 
   render() {
@@ -42,11 +43,12 @@ class App extends Component {
       <Card url={i.images.fixed_height.url} />
     ));
     return (
-      <div className="App">
+      < div class="trending">
         <Search update={this.updateGif} />
-        <button onClick={this.trendingApi}> Go to Trending </button>
-
-        {gifs}
+        <button class = "button" onClick={this.trendingApi}> Go to Trending </button>
+        <div class="grids">
+                {gifs}
+        </div> 
       </div>
     );
   }

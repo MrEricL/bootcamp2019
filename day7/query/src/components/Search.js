@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import '../Card.css';
 
 class Search extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class Search extends Component {
   };
 
   apiCall = e => {
-    const key = "API_KEY";
+      const key = "";
     const q = this.state.term.split(" ").join("+");
     const url =
       "http://api.giphy.com/v1/gifs/search?q=" + q + "&api_key=" + key;
@@ -34,8 +35,8 @@ class Search extends Component {
   render() {
     return (
       <div className="App">
-        <input type="text" className="search" onChange={this.change} />
-        <button onClick={this.apiCall}> Submit </button>
+            <input type="text" className="search" onChange={this.change} />&nbsp;&nbsp;
+        <br /><button className="submit" onClick={this.apiCall}> Submit </button>
       </div>
     );
   }

@@ -1,7 +1,44 @@
-.Card {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode' sans-serif;
-    border: 3px solid black;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #f0f0f0;
+
+
+
+.App{
+    text-align: center;
 }
+
+.grids {
+    margin-top:10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: black;
+    padding: 10px;
+   
+}
+
+.trending {
+    text-align: center;
+    background-color:black; 
+}
+
+.button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.submit {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.submit:hover {
+    background-color: #555555;
+    color: white;
+}
+
