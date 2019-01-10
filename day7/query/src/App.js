@@ -26,10 +26,9 @@ class App extends Component {
 
       axios.get(url)
         .then(response => {
-            let l = [];
-            (response.data.data).forEach((i) => l.push(i["bitly_url"]));
-            this.setState({ data : l });
-        console.log(l);
+            this.setState({ data : response.data.data });
+            console.log(this.state.data);
+
         })
         .catch(err =>  {
           console.log(err);
@@ -39,7 +38,7 @@ class App extends Component {
 
 
   render() {
-    const gifs = this.state.data.map(i => <Card url = {i}/>);
+    const gifs = this.state.data.map(i => <Card url = {i.images.fixed_height.url}/>);
     return (
       <div className="App">
             <Search />

@@ -24,7 +24,7 @@ class Search extends Component {
 	    axios.get(url)
 	      .then(response => {
 	      		let l = [];
-	      		(response.data.data).forEach((i) => l.push(i["url"]));
+	      		(response.data.data).forEach((i) => l.push(i.images.fixed_height.url));
 	          this.setState({ links : l });
 				console.log(l);
 	      })
