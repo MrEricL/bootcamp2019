@@ -11,11 +11,11 @@ import axios from 'axios';
 
 class App extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      accountBalance: 14568.27,
+      accountBalance: 100,
       currentUser: {
         userName: 'bob_loblaw',
         memberSince: '08/23/99',
@@ -36,7 +36,7 @@ class App extends Component {
       axios.get("https://moj-api.herokuapp.com/credits")
       .then(response => {
           this.setState({ credit : response["data"]});
-          console.log(this.state.credit);
+          console.log("Credit in App:", this.state.credit);
       })
       .catch(err =>  {
         console.log(":(");
@@ -46,7 +46,7 @@ class App extends Component {
       axios.get("https://moj-api.herokuapp.com/debits")
       .then(response => {
           this.setState({ debit : response["data"]});
-          console.log(this.state.debit);
+          console.log("Debit in App:",this.state.debit);
       })
       .catch(err =>  {
         console.log(":(");
@@ -60,17 +60,17 @@ class App extends Component {
     const UserProfileComponent = () => (
         <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}  />
     );
-    const DebitComponent = () => (<Debit accountBalance={this.state.accountBalance} debit = {this.debit}/>);
+    const DebitComponent = () => (<Debit accountBalance={this.state.accountBalance} debit = {this.state.debit}/>);
     const CreditComponent = () => (<Credit accountBalance={this.state.accountBalance} credit = {this.state.credit}/>);
 
     return (
         <Router>
           <div>
-            <Route exact path="/" render={HomeComponent}/>
+            <Route exact path="/" render={(props) => <HomeComponent {...props} accountBalance={this.state.accountBalance} />}/>
             <Route exact path="/userProfile" render={UserProfileComponent}/>
             <Route exact path="/login" render={LogInComponent}/>
-            <Route exact path="/credit" render={CreditComponent}/>
-            <Route exact path="/debit" render={DebitComponent}/>
+            <Route exact path="/credit" render={(props) => <CreditComponent {...props} accountBalance={this.state.accountBalance} credit = {this.state.credit} />} />
+            <Route exact path="/debit" render={(props) => <DebitComponent {...props} accountBalance={this.state.accountBalance} debit = {this.state.debit} />}/>
           </div>
         </Router>
     );

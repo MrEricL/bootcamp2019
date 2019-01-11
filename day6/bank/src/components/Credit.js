@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import Card from './Card'
 
 class Credit extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      accountBalance: 14568.27,
-      credit: [],
+      accountBalance: this.props.accountBalance,
+      credit: this.props.credit,
       val: 0,
       desc: "",
     };
@@ -28,13 +28,20 @@ class Credit extends Component {
     let val = this.state.val;
     let desc = this.state.desc;
     let bal = this.state.accountBalance;
-    let c = this.state.credit.push({"description":desc, "amount":val, "date": "123456"});
-    this.setState({accountBalance: bal + val, credit: c, desc: "", val: 0});
+    console.log(val);
+    console.log("this", this.state.credit);
+    //let c = this.state.credit.push({"description":desc, "amount":val, "date": "123456"});
+
+    this.setState({accountBalance: Number(bal) + Number(val), 
+                  credit: [...this.state.credit, {"description":desc, "amount":val, "date": "123456"}], 
+                  desc: "", 
+                  val: 0,
+                });
   }
 
   render() {
     const disp = this.state.credit.map((i) => <Card d = {i["description"]} a = {i["amount"]} dt = {i["date"]} />);
-
+    //console.log(this.state.credit);
 
     return (
       <div>
@@ -47,7 +54,7 @@ class Credit extends Component {
           </li>
         </ul>
         <h1>Credit</h1>
-        <AccountBalance accountBalance={this.props.accountBalance} />
+        <AccountBalance accountBalance={this.state.accountBalance} />
         Numb: <input type="text" onChange={this.changeText}/>
         <br />
         Descrip: <input type="text" onChange={this.changeDesc}/>

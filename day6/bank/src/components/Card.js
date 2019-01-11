@@ -7,14 +7,14 @@ class Card extends Component {
         this.state = {
             d : this.props.d,
             a : this.props.a,
-            dt : this.props.date,
+            dt : this.props.dt,
         };
     }
     
     render() {
         return (
             <div className="info">
-            <p> Description: {this.state.d}| Amount: {this.state.a} | Date: {this.state.dt} </p>
+            <p> Description: {this.state.d} | Amount: {this.state.a} | Date: {this.state.dt} </p>
          </div>
         );
     }

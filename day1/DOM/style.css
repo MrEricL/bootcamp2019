@@ -1,0 +1,63 @@
+body {
+	background-color: coral;
+}
+
+h3 {
+	color: aqua;
+}
+
+#righttext {
+
+	font-size: 50px;
+	color: Chartreuse;
+	animation:3s blinker linear infinite;
+    -webkit-animation:3s blinker linear infinite;
+    -moz-animation:3s blinker linear infinite;
+
+    }
+
+    @-moz-keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @-webkit-keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+     }
+
+    @keyframes blinker {  
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+}
+
+
+#hoverbox {
+	border-style: solid;
+	background-color: lightsteelblue;
+}
+
+button {
+	border-radius: 10px;
+	padding: 10px;
+	background-color: royalblue;
+	color: gold;
+}
+
+h1, form {
+	color: orange;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+input {
+	background-color: magenta;
+	border-style: dotted;
+}
