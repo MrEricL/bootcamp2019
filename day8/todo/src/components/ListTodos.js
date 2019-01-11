@@ -8,10 +8,17 @@ class ListTodos extends Component {
     }
 
     render() {
+    	var todos = this.props.value.map(todo => {
+
+    		return <Todo data={todo}/>
+    	});
+    	
+
         return (
         	<div>
-        		
+
             	<p>ListTodos Comp</p>
+            	{todos}
             	<Todo/>
             </div>
         );

@@ -2,22 +2,21 @@ import { ADD, REMOVE, RESET} from "../actions";
 
 // initialize default state
 const initialState = {
-  bunchOfThings: []
+  bunchOfThings: [{"name": "test"}]
 };
 
 // create reducer function
 
 
 export default (state = initialState, action) => {
+  let newState = Object.assign({}, state)
   switch (action.type) {
     case ADD:
-      const biggerList = state.bunchOfThings;
-      biggerList.push(action.value);
-      return Object.assign({}, state, biggerList);
+      newState.push(action.value);
+      return Object.assign({}, state, newState);
     case REMOVE:
-      const smallerList = state.bunchOfThings;
-      smallerList.splice(action.index,1);
-      return Object.assign({}, state, smallerList);
+      newState.splice(action.index,1);
+      return Object.assign({}, state, newState);
     case RESET:
       return Object.assign({}, state, (state.bunchOfThings = []));
     default:

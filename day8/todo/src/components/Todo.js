@@ -9,7 +9,12 @@ class Todo extends Component {
 
     render() {
         return (
-            <p>Todo Comp</p>
+        	<div>
+            <p>Todos Comp</p>
+            <p>{this.props.data.name}</p>
+            </div>
+
+
         );
     }
 }
