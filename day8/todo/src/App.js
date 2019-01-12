@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import ListTodos from "./components/ListTodos";
+import TodoApp from './components/TodoApp';
 
 
 
@@ -10,8 +11,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>ToDo App</header>
-        <ListTodos/>
+        <header>To-do App</header>
+        <TodoApp/>
       </div>
     );
   }

@@ -8,6 +8,7 @@ class Todo extends Component {
     }
 
     render() {
+    	console.log('todo props', this.props);
         return (
         	<div>
             <p>Todos Comp</p>

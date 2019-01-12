@@ -9,10 +9,12 @@ class ListTodos extends Component {
 
     render() {
     	var todos = this.props.value.map(todo => {
+            console.log('map todo', todo)
 
     		return <Todo data={todo}/>
     	});
-    	
+    	console.log("list todo todos", todos);
+
 
         return (
         	<div>

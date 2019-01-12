@@ -6,6 +6,7 @@ import ListTodos from './ListTodos';
 const mapStateToProps = (state, ownProps) => {
   return {
     value: state.bunchOfThings,
+    index: state.indexToRemove,
   };
 };
 
