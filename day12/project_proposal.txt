@@ -1,0 +1,22 @@
+1. Microfinancing
+
+Reason: Over 60% of the world lives on $2 or less, making just enough to feed themselves. By providing loans of $5 or less, farmers and laborers in extreme poverty are able to invest into their future. This web application would connect banks and users.
+
+Stack: PostExpRctNode
+API: Google maps
+
+
+2. Tinder for Dogs
+
+Reason: There is a market for dating apps for dogs.
+
+Stack: PERN
+API: Google maps, Dog API (picture of dogs)
+
+3. Stock market
+
+Reason: Recent volatility makes for interesting analysis in controlled enviroment
+
+Stack: PERN
+API: AlphaVantage
+
