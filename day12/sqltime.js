@@ -69,11 +69,11 @@ app.get('/posts/', (req, res) => {
 	let postList = ""
 	posts.findAll().then(function(rows) {
 		
-	for(var i = 0; i < rows.length; i++) {
-		var columnData = rows[i].dataValues;
-		var content = columnData.content;
-		console.log(content);
-		postList += content + "<br><br>";
+		for(var i = 0; i < rows.length; i++) {
+			var columnData = rows[i].dataValues;
+			var content = columnData.content;
+			console.log(content);
+			postList += content + "<br><br>";
 		}
 		res.send(postList);
 	});	
