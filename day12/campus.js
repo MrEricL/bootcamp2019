@@ -1,5 +1,7 @@
 const express = require('express')
+var cors = require('cors')
 const app = express()
+app.use(cors())
 
 
 
@@ -94,8 +96,9 @@ app.get('/student', (req, res) => {
 	let ret = ""
 
 	student.findAll({
-	  include: [campus]
+	  /*include: [campus]*/
 		}).then(function(rows) {
+			/*
 		console.log(rows, "\n\n\n\n\n\n")
 		for(var i = 0; i < rows.length; i++) {
 			var columnData = rows[i].dataValues;
@@ -109,7 +112,8 @@ app.get('/student', (req, res) => {
 
 			ret += `${fname} ${lname}<br>${school}<br>${email}<br>${gpa}<br><br>`;
 		}
-		res.send(ret);
+		res.send(ret);*/
+		res.send(rows);
 	});	
 	
 })
@@ -117,10 +121,10 @@ app.get('/student', (req, res) => {
 
 app.get('/campus', (req, res) => {
 
-	let ret = ""
+	let ret = {}
 	console.log("\n\n\n\nWORKING\n\n\n\n")
 	campus.findAll().then(function(rows) {
-
+		/*
 		for(var i = 0; i < rows.length; i++) {
 			var columnData = rows[i].dataValues;
 			var name = columnData.name;
@@ -133,6 +137,8 @@ app.get('/campus', (req, res) => {
 			ret += `<img src = "${img}"><br>${name}<br>${address}<br><p>${description}</p><br><br>`;
 		}
 		res.send(ret);
+		*/
+		res.send(rows);
 	});	
 	
 })

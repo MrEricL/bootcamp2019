@@ -1,0 +1,15 @@
+{
+  "name": "bootcamp2019",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MrEricL/bootcamp2019",
+  "author": "MrEricL <eli6@stuy.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
+}
