@@ -1,0 +1,14 @@
+{
+  "name": "day14",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {	"test-init": "jasmine init",        
+  	"test-examples" : "jasmine examples",        
+  	"test": "jasmine"
+
+  },
+  "dependencies": {
+    "jasmine": "^3.3.1"
+  }
+}
